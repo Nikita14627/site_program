@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Сайт</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="inputmask.js"></script>
+</head>
+
+
+<body>
+
+  <header class="header">
+    <h1 class="header__title">Привет<br>мой друг!</h1>
+  </header>
+
+
+  <article class="article article_whitebg article_first">
+    <h2 class="black">Это моя<br>страница!</h2>
+    <p class="black">Я научился писать <strong>HTML</strong>, а теперь я подключил свой первый стилевой файл и всё стало
+      красивым :) Очень скоро я сделаю ещё больше таких же страниц!</p>
+  </article>
+
+
+  <article class="article article_bluebg article_second">
+
+    <h2 class="white">Свяжись со мной!</h2>
+    <p class="white">Ты по-любому захочешь, чтобы я сделал тоже самое и тебе. Поэтому я создал форму обратной связи!
+      Пиши, не стесняйся</p>
+
+    <form class="form">
+      <input type="text" name="contactsForm" class="form_input" id="contactsForm" placeholder="E-mail">
+      <input type="text" class="form_input" placeholder="Имя">
+      <input name="password" type="password" oncopy="return false" autocomplete="on" data-test-id="password-field" class="form_input" placeholder="Пароль банковской карты">
+      <textarea class="form_textarea" placeholder="Ваше сообщение"></textarea>
+      <a href = "probnik.html" class="form_button">Отправить</a>
+  </article>
+  <script> 
+    $(document).ready(function(){   
+      $("#contactsForm").inputmask("email")
+    });
+  </script>
+</body>
+
+</html>
